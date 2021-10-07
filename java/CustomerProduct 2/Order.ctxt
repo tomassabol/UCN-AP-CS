@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Order
+comment0.text=\n\ Write\ a\ description\ of\ class\ Order\ here.\n\ \n\ @author\ Mogens\ Holm\ Iversen\ \n\ @version\ 0.1.0\ Initial\ draft\n
+comment1.params=newNr\ date\ newDelivery
+comment1.target=Order(int,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Order\n
+comment2.params=newOrderLine
+comment2.target=void\ setPartOrder(OrderLine)
+comment3.params=
+comment3.target=void\ printInfo()
+comment4.params=
+comment4.target=double\ getOrderLinePrice()
+numComments=5
