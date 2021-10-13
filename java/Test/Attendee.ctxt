@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Attendee
+comment1.params=name\ experience
+comment1.target=Attendee(java.lang.String,\ int)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=
+comment3.target=int\ getExperience()
+comment4.params=name
+comment4.target=java.lang.String\ setName(java.lang.String)
+comment5.params=experience
+comment5.target=int\ setExperience(int)
+comment6.params=
+comment6.target=void\ printAttendeeInfo()
+numComments=7
