@@ -86,11 +86,23 @@ public class Room
     
     public void experienceRange(int value1, int value2){
         for (Attendee attendee : attendees){
-            if ((value1 < attendee.getExperience()) && (attendee.getExperience() < value2)){
-                expAttendees.add(attendee);
+            if (value1 < value2){
+                if ((value1 < attendee.getExperience()) && (attendee.getExperience() < value2)){
+                    expAttendees.add(attendee);
+                }
+                System.out.println(expAttendees);
             }
-            System.out.println(expAttendees);
-        } 
+            else{
+                if ((value2 < attendee.getExperience()) && (attendee.getExperience() < value1)){
+                    expAttendees.add(attendee);
+                }
+                System.out.println(expAttendees);
+            }
+        }
+        
+        for (Attendee attendee : expAttendees){
+            attendee.printAttendeeInfo();
+        }
     }
     
     
