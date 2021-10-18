@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=LottoNumbers
+comment0.text=\n\ @author\ (Tomas\ Sabol)\n\ @version\ (Oct\ 18,\ 2021)\n
+comment1.params=
+comment1.target=LottoNumbers()
+comment2.params=
+comment2.target=void\ euroJackpot()
+comment3.params=
+comment3.target=void\ euroJackpotPlus()
+comment4.params=
+comment4.target=void\ vikingLotto()
+numComments=5
