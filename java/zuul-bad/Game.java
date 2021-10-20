@@ -34,7 +34,7 @@ public class Game
      */
     private void createRooms()
     {
-        Room outside, theater, pub, lab, office;
+        Room outside, theater, pub, lab, office, cellar;
       
         // create the rooms
         outside = new Room("outside the main entrance of the university");
@@ -43,12 +43,25 @@ public class Game
         lab = new Room("in a computing lab");
         office = new Room("in the computing admin office");
         
+        cellar = new Room("in the cellar");
+        
         // initialise room exits
-        outside.setExits(null, theater, lab, pub);
-        theater.setExits(null, null, null, outside);
-        pub.setExits(null, outside, null, null);
-        lab.setExits(outside, office, null, null);
-        office.setExits(null, null, null, lab);
+        // outside
+        outside.setExits("east", theater);
+        outside.setExits("south", lab);
+        outside.setExits("west", pub);
+        //theater
+        theater.setExits("west", outside);
+        //pub
+        pub.setExits("east", outside);
+        //lab
+        lab.setExits("north", outside);
+        lab.setExits("east", office);
+        //office
+        office.setExits("east", lab);
+        office.setExits("down", cellar);
+        //cellar
+        cellar.setExits("up", office);
 
         currentRoom = outside;  // start game outside
     }
@@ -81,10 +94,10 @@ public class Game
         System.out.println("World of Zuul is a new, incredibly boring adventure game.");
         System.out.println("Type 'help' if you need help.");
         System.out.println();
-        printcurrentLocation();
+        printLocationInfo();
     }
 
-    private void printcurrentLocation(){
+    private void printLocationInfo(){
         System.out.println("You are " + currentRoom.getDescription());
         System.out.print("Exits: ");
         if(currentRoom.northExit != null) {
@@ -178,7 +191,7 @@ public class Game
         if (nextRoom == null) {
             System.out.println("There is no door!");
         }
-        printcurrentLocation();
+        printLocationInfo();
     }
 
     /** 
