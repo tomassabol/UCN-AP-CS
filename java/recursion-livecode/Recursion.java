@@ -11,15 +11,18 @@ public class Recursion
     public static void main(String args[]){
         Recursion tester = new Recursion();
         long startTime = System.currentTimeMillis();
-        tester.countDown(10000);
+        tester.countDown(5);
         long endTime = System.currentTimeMillis();
         System.out.println("Guesttime of running time: " + (endTime - startTime));
     }
 
     private void countDown(int from){
-        System.out.println(from);
-        while (from>=0){
-            System.out.println(from--);
+        if(from == 0){
+            System.out.println("0");
+        }
+        else{
+            System.out.println(from+"");
+            countDown(from-1);
         }
     }
 }
