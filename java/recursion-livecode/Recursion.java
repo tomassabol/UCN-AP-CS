@@ -21,7 +21,7 @@ public class Recursion
             System.out.println("0");
         }
         else{
-            System.out.println(from+"");
+            System.out.println(from);
             countDown(from-1);
         }
     }
